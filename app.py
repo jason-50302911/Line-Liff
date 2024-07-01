@@ -32,16 +32,16 @@ liff_api = LIFF('mjKgiMMUswlG883lNPxJOGpi3gNVRJ8khLOGkgC8NzXZrUI9OoAglY14rNOe1C+
 line_bot_api = LineBotApi('mjKgiMMUswlG883lNPxJOGpi3gNVRJ8khLOGkgC8NzXZrUI9OoAglY14rNOe1C+uBKMpS6n1NPKoXfjDjSp2CKSxTDC7N/iaTdGxKRuXW2v8ZQzcfL99S+uyltX1WzddbQQR0S87YkfPOYk+1BGv0QdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('843fa1bfa2bfea8a7b34d25900c77b59')
 
-try:
-    now_LIFF_APP_number = len(liff_api.get())
-except:
-    now_LIFF_APP_number = 0
+# try:
+#     now_LIFF_APP_number = len(liff_api.get())
+# except:
+#     now_LIFF_APP_number = 0
 
 target_LIFF_APP_number = 10
-print(target_LIFF_APP_number,now_LIFF_APP_number)
-if now_LIFF_APP_number < target_LIFF_APP_number:
-    for i in range(target_LIFF_APP_number - now_LIFF_APP_number):
-        liff_api.add(view_type="full",view_url="https://www.google.com")
+# print(target_LIFF_APP_number,now_LIFF_APP_number)
+# if now_LIFF_APP_number < target_LIFF_APP_number:
+#     for i in range(target_LIFF_APP_number - now_LIFF_APP_number):
+#         liff_api.add(view_type="full",view_url="https://www.google.com")
 
 @app.route("/")
 def index():
