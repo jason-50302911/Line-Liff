@@ -1,4 +1,4 @@
-from flask import Flask, request, abort, render_template
+from flask import Flask, request, abort, render_template, redirect
 
 from linebot import (
     LineBotApi, WebhookHandler
@@ -45,7 +45,7 @@ target_LIFF_APP_number = 10
 
 @app.route("/")
 def index():
-    return render_template("./liff.html")
+    return redirect("https://toiletclient-553f078e32d3.herokuapp.com")
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
